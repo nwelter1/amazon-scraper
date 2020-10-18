@@ -50,7 +50,7 @@ def getProductDetails(url):
         if price is None:
             price = soup.find(id="priceblock_saleprice")
             details['deal'] = False
-        print(title, price)
+        
         # Check for availability and add data into dictionary
         if title is not None and price is not None:
             details['name'] = title.get_text().strip()
